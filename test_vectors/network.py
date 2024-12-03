@@ -23,5 +23,5 @@ class NetworkScenarios:
         return {
             "worker1": {"healthy": True, "latency": 10},
             "worker2": {"healthy": True, "latency": 15},
-            "worker3": {"healthy": True, "latency": 1000}
-        }
+           "worker3": {"healthy": True, "latency": 1000}
+        } 

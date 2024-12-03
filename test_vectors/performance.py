@@ -1,3 +1,8 @@
+from datetime import time
+from coordinator import Coordinator
+from worker import Worker
+
+
 async def test_processing_speed():
     """Test processing speed meets requirements"""
     coordinator = Coordinator(port=8000)
@@ -8,7 +13,7 @@ async def test_processing_speed():
     ]
     
     # Generate 1GB test file
-    generate_test_data(size_mb=1024, path="test_vectors/logs/large.log")
+    generate_test_data(size_mb=1024, path="test_vectors/logs/large.log") # type: ignore
     
     start_time = time.time()
     await coordinator.process_file("test_vectors/logs/large.log")

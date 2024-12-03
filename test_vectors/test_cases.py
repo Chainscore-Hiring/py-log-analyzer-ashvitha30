@@ -1,5 +1,8 @@
 import pytest
-import asyncio
+
+from coordinator import Coordinator
+from test_vectors.network import NetworkScenarios
+from worker import Worker
 
 async def test_normal_processing():
     """Test normal log processing with all workers"""
